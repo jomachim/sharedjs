@@ -1,5 +1,17 @@
 /* shared functions */
 
+/* return random number between a & b at precision z */
+function rand(a, b, z) {
+        if (!b) {
+            b = 0;
+        }
+        if (!z) {
+            zero = 1;
+        } else {
+            zero = 1 / z
+        };
+        return Math.round(Math.random() * a + b) * zero;
+}
 /* is a number an INT ? */
 function isInt(n){
         if((Number(n).length!==parseInt(n).length)){
