@@ -38,10 +38,10 @@ function factorielle(n) {
 }
 
 function reduct(s){
-    if(s>9999999999){s=2};
+    if(s>9999999999 || s <-999999999){s=2};
     str=Number(s).toString();
     str=str.replace('e+','');
-    if(str.indexOf('.')>-1){str=Math.round(str)}
+    if(str.indexOf('.')>-1){str=Math.round(Number(str))}
     if(str==0){return 1}
    //console.log("reducting "+str);
     var ar=str.split("");
