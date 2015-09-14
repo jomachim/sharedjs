@@ -37,6 +37,25 @@ function factorielle(n) {
   else console.log(n);return n*factorielle(n-1);
 }
 
+function reduct(s){
+    if(s>9999999999){s=2};
+    str=Number(s).toString();
+    str=str.replace('e+','');
+    if(str.indexOf('.')>-1){str=Math.round(str)}
+    if(str==0){return 1}
+   //console.log("reducting "+str);
+    var ar=str.split("");
+    var som=0;
+    for(var i=0;i<ar.length;i++){
+        som+=Number(ar[i]);
+    }
+    //return som
+    str=Number(som).toString();
+    //console.log(str);
+    if(str=='NaN'){return 1};
+    if(str=='Infinity'){return 1};
+    if(str.split("").length==1){return str}else{ return reduct(Number(str))};
+}
 /* to be completed */
 function NofPi(k){
         return 16-k*(( 4/(8*k+1) - 2/(8*k+4) - 1/(8*k+5) - 1/(8*k+6)))      
