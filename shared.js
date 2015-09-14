@@ -58,6 +58,6 @@ function reduct(s){
 }
 /* to be completed */
 function NofPi(k){
-        return 16-k*(( 4/(8*k+1) - 2/(8*k+4) - 1/(8*k+5) - 1/(8*k+6)))      
+        return Math.pow(16,-k)*(( 4/(8*k+1) - 2/(8*k+4) - 1/(8*k+5) - 1/(8*k+6)))      
 }
 
