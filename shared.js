@@ -56,8 +56,52 @@ function reduct(s){
     if(str=='Infinity'){return 1};
     if(str.split("").length==1){return str}else{ return reduct(Number(str))};
 }
+
+/* a fibonacci suite generator */
+function fibonacci(a, b, n, resar) {
+    var c = 0;
+    var i = 0;
+    var ar = new Array();
+    while (i < n) {
+        c = a + b;
+        a = b - a + 1;
+        b = c;
+        if (resar) {
+            ar.push(c);
+        }
+        i++;
+    }
+    if (resar) {
+        return ar;
+    }
+    //trace(c);
+    return c;
+}
+
+/* check if a is divisible by b */
+function isDivisibleBy(a, b) {
+    if (a % b == 0) {
+        //trace(n+" est divisible par "+i);
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/* check if a number is prime */
+function isPremier(n) {
+    for (var j = 2; j < Math.round(Math.sqrt(n)); j++) {
+        if (isDivisibleBy(n, j)) {
+
+            return true;
+        }
+    }
+    return false;
+}
+
 /* to be completed */
 function NofPi(k){
-        return Math.pow(16,-k)*(( 4/(8*k+1) - 2/(8*k+4) - 1/(8*k+5) - 1/(8*k+6)))      
+        var f= ( 4/(8*k+1) - 2/(8*k+4) - 1/(8*k+5) - 1/(8*k+6));
+        return Math.pow(16,-k*f).toString(10);
 }
 
