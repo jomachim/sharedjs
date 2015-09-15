@@ -104,6 +104,6 @@ function NofPi(k){
         // pi += p16 * (4/(8*k + 1) - 2/(8*k + 4) - 1/(8*k + 5) - 1/(8*k+6));
         // p16 /= 16;
         var f= ( 4/(8*k+1) - 2/(8*k+4) - 1/(8*k+5) - 1/(8*k+6));
-        return parseInt(Math.pow(16,-k*(f/16)),16);
+        return parseInt(Math.pow(16,-k*(f/16)));
 }
 
